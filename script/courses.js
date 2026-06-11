@@ -38,3 +38,4 @@ unitBtns.forEach(function (btn) {
         document.getElementById(btn.id + '-notes').style.display = 'block';
     });
 });
+
