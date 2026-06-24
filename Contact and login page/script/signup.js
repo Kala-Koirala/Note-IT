@@ -49,12 +49,32 @@ form.addEventListener('submit', function (e) {
 
     // Check if form is completely valid
     if (isFirstNameValid && isLastNameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid) {
-        alert('Account successfully created! (Form Validated)');
-        // Inside a real application, you would send data to your backend API here
+    
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const exists = users.find(u => u.email === email.value.trim());
+
+    if (exists) {
+        validateField(email, document.getElementById('emailError'), false);
+        document.getElementById('emailError').textContent = "This email is already registered.";
+        return;
     }
+
+    const newUser = {
+        firstName: firstName.value.trim(),
+        lastName:  lastName.value.trim(),
+        dob:       document.getElementById('date-input').value.trim(),
+        email:     email.value.trim(),
+        password:  password.value
+    };
+
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Account created! Please log in.");
+    window.location.href = "login.html";
+}
 });
 
-// Optional: Remove error layout as user types
 document.querySelectorAll('input').forEach(input => {
     input.addEventListener('input', function () {
         if (this.classList.contains('invalid') && this.value.trim() !== '') {
@@ -65,34 +85,3 @@ document.querySelectorAll('input').forEach(input => {
     });
 });
 
-const datePicker = document.querySelector(".date-picker");
-const dateInput = document.querySelector("#date-input");
-const cancelBtn = document.querySelector(".cancel");
-const applyBtn = document.querySelector(".apply");
-const dates = document.querySelector(".dates");
-const days = document.querySelector(".days");
-
-let selectedDate = new Date();
-let selectedYear = selectedDate.getFullYear();
-let selectedMonth = selectedDate.getMonth();
-
-dateInput.addEventListener("click", () => {
-    datePicker.hidden = false;
-});
-
-cancelBtn.addEventListener("click", () => {
-    datePicker.hidden = true;
-});
-
-applyBtn.addEventListener("click", () =>{
-
-
-    datePicker.hidden = true;
-});
-
-
-const displayDates = () => {
-    dates.innerHTML = "";
-};
-
-displayDates();

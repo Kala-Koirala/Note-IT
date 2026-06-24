@@ -80,111 +80,6 @@ label {
     color: #475569;
 }
 
-#date-picker-container{
-    position: relative;
-}
-
-.date-picker{
-    position: absolute;
-    top: 100%;
-    z-index: 80;
-    margin-top: 2px;
-    padding: 10px;
-    background: white;
-    border-radius: 5px;
-    border: 2px solid wheat;
-}
-.date-picker button{
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-.days, .dates{
-    display: grid;
-    grid-template-columns: repeat(7, 32px);
-    gap: 10px;
-    margin-block: 10px;
-}
-
-.days span{
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-}
-.dates button{
-    color: slategray;
-    aspect-ratio: 1;
-}
-.dates button:hover{
-    background: rgb(102, 182, 229);
-}
-.dates button.today{
-    background: var(--pale-blue);
-}
-.dates button.selected{
-    background: var(--dark-blue);
-    color: white;
-}
-
-.date-picker-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-}
-
-.date-picker-header select.month-input{
-    background: transparent;
-    padding: 6px 8px;
-}
-
-.date-picker-header select, .date-picker-header input{
-    font-size: 14px;
-    border: 1px solid var(--border);
-}
-.date-picker-header input{
-    max-width: 64px;
-    color: var(--text);
-}
-.date-picker-header input.year-input {
-    width: 72px;
-    max-width: none;
-    padding: 6px 8px;
-    text-align: center;
-}
-
-.date-picker-header button{
-    color: var(--muted-text);
-}
-.date-picker-header button:hover{
-    background: var(--pale-blue);
-}
-
-.date-picker-footer{
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border);
-}
-
-.date-picker-footer button{
-    border-radius: 5px;
-    padding: 3px 10px;
-    background: rgb(220, 223, 226);
-}
-
-.date-picker-footer button.apply{
-    background: var(--blue);
-    color: white;
-}
-
 input {
     width: 100%;
     padding: 12px 16px;
@@ -270,3 +165,40 @@ input.invalid:focus {
 .footer-text a:hover {
     text-decoration: underline;
 }
+
+.ui-datepicker-header{
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+}
+
+.ui-datepicker th{
+    color: var(--muted-text);
+}
+
+.ui-datepicker td a, .ui-datepicker td span{
+    color: var(--text);
+    text-align: center;
+    background: var(--white) !important;
+}
+
+.ui-datepicker td a:hover, .ui-state-hover{
+    background: var(--pale-blue) !important;
+    color: var(--blue) !important;
+    border: none !important;
+}
+
+.ui-datepicker .ui-datepicker-today a {
+    background: var(--pale-blue);
+    color: var(--blue);
+    font-weight: 700;
+    border: 1px solid var(--light-blue) !important;
+}
+
+.ui-datepicker .ui-state-active{
+    background-color: var(--blue) !important;
+    color: var(--white);
+    border: none !important;
+}
+
