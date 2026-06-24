@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #373fac;
+    --primary-hover: #333f9d;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --border-color: #cbd5e1;
+    --error-color: #ef4444;
+    --blue: #2563eb;
+    --light-blue: #3b82f6;
+    --pale-blue: #dbeafe;
+    --dark-blue: #1e40af;
+    --text: #0f172a;
+    --muted-text: #475569;
+    --bg: #f0f6ff;
+    --white: #ffffff;
+    --gray-bg: #f1f5f9;
+    --border: #e2e8f0;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    flex: 1;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 45px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+input.invalid {
+    border-color: var(--error-color);
+    background-color: #fef2f2;
+}
+
+input.invalid:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.footer-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.ui-datepicker-header{
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+}
+
+.ui-datepicker th{
+    color: var(--muted-text);
+}
+
+.ui-datepicker td a, .ui-datepicker td span{
+    color: var(--text);
+    text-align: center;
+    background: var(--white) !important;
+}
+
+.ui-datepicker td a:hover, .ui-state-hover{
+    background: var(--pale-blue) !important;
+    color: var(--blue) !important;
+    border: none !important;
+}
+
+.ui-datepicker .ui-datepicker-today a {
+    background: var(--pale-blue);
+    color: var(--blue);
+    font-weight: 700;
+    border: 1px solid var(--light-blue) !important;
+}
+
+.ui-datepicker .ui-state-active{
+    background-color: var(--blue) !important;
+    color: var(--white);
+    border: none !important;
+}
+
