@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | Note-IT</title>
+    
+    <link rel="stylesheet" href="../assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="../style/college&scholar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html" class="NIT-logo">
+            <span>Note-IT</span>
+        </a>
+        <ul class="pages">
+            <li><a href="../index.html">Home</a></li>
+            <li class="page">
+                <a href="#">Courses</a>
+                <div class="dropdown">
+                    <div class="dropdown-items">
+                        <a href="bcsit.html">BCSIT</a>
+                        <a href="bba.html">BBA</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="college.html" style="color: var(--blue);">College</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+        </ul>
+        <div class="login-signup-btn">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="header">
+            <h1>Explore <span>Colleges</span></h1>
+            <p>Find affiliated Pokhara University constituent and private colleges.</p>
+        </div>
+
+        <div class="filters-bar">
+            <div class="search-box">
+                <img src="../assets/search.svg" alt="" height="20" width="20">
+                <input id="search-input" type="text" placeholder="Search colleges…" oninput="filterColleges()">
+            </div>
+
+            <select id="course-filter" class="filter-dropdown" onchange="filterColleges()">
+                <option value="">All Courses</option>
+                <option value="BBA">BBA</option>
+                <option value="BCSIT">BCSIT</option>
+            </select>
+
+            <select id="location-filter" class="filter-dropdown" onchange="filterColleges()">
+                <option value="">All Locations</option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Pokhara">Pokhara</option>
+            </select>
+        </div>
+
+        <section class="section" style="margin: 20px 0;">
+            <div class="section-header" style="margin-bottom: 15px;">
+                <h2 style="font-size: 1.4rem; font-family: 'Sora', sans-serif;">Explore Colleges</h2>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="../assets/malpi.png" alt="Malpi"></div>
+                <div class="item"><img src="../assets/u.jpg" alt="Uniglobe"></div>
+                <div class="item"><img src="../assets/apex.png" alt="Apex"></div>
+                <div class="item"><img src="../assets/ace.png" alt="Ace"></div>
+                <div class="item"><img src="../assets/apollo.jpg" alt="Apollo"></div>
+                <div class="item"><img src="../assets/excel.jpg" alt="Excel"></div>
+                <div class="item"><img src="../assets/shubashree.png" alt="Shubashree"></div>
+                <div class="item"><img src="../assets/quest.webp" alt="Quest"></div>
+                <div class="item"><img src="../assets/saim.png" alt="Saim"></div>
+            </div>
+        </section>
+        
+        <div id="results-count" class="results-count"></div>
+        <div id="college-grid" class="cards-grid"></div>
+
+    </div>
+
+    <footer>
+        © 2026 Note-IT | PU Resource Hub
+    </footer>
+
+    <script src="../assets/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="../assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsiveClass: true,
+                responsive: {
+                    0: { items: 2 },
+                    600: { items: 3 },
+                    1000: { items: 5 }
+                }
+            });
+        });
+    </script>
+    
+    <script src="../script/college.js"></script>
+</body>
+</html>
