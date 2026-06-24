@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="style/signup.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h2>Create your account</h2>
+            <p>Join thousands of users today — it's free.</p>
+        </div>
+
+        <form id="signupForm" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" placeholder="first" required>
+                    <div class="error-message" id="firstNameError">First name is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" placeholder="last" required>
+                    <div class="error-message" id="lastNameError">Last name is required.</div>
+                </div>
+            </div>
+
+            <div class="form-group" id="date-picker-container">
+                <label for="date-input">Date of Birth</label>
+                <input type="text" id="date-input" placeholder="Select Date" />
+
+                <div class="date-picker" >
+                    <div class="date-picker-header">
+                        <button class="prev">Prev</button>
+
+                        <div>
+                            <select class="month-input">
+                                <option >January</option>
+                                <option >February</option>
+                                <option >March</option>
+                                <option >April</option>
+                                <option >May</option>
+                                <option >June</option>
+                                <option >July</option>
+                                <option >August</option>
+                                <option >September</option>
+                                <option >October</option>
+                                <option >November</option>
+                                <option >December</option>
+                            </select>
+                            <input type="number" class="year-input" value="2026" />
+                        </div>
+
+                        <button class="next">Next</button>
+                    </div>
+
+
+                    <div class="days">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+
+                    <div class="dates">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>10</button>
+                        <button>11</button>
+                        <button>12</button>
+                        <button>13</button>
+                        <button>14</button>
+                        <button>15</button>
+                        <button>16</button>
+                        <button>17</button>
+                        <button>18</button>
+                        <button>19</button>
+                        <button>20</button>
+                        <button>21</button>
+                        <button>22</button>
+                        <button class="today">23</button>
+                        <button>24</button>
+                        <button>25</button>
+                        <button class="selected">26</button>
+                        <button>27</button>
+                        <button>28</button>
+                        <button>29</button>
+                        <button>30</button>
+                    </div>
+
+                    <div class="date-picker-footer">
+                        <button class="cancel">Cancel</button>
+                        <button class="apply">Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="gmail" required>
+                <div class="error-message" id="emailError">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Min. 8 characters" required minlength="8">
+                    <button type="button" class="toggle-password" onclick="toggleVisibility('password')">Show</button>
+                </div>
+                <div class="error-message" id="passwordError">Password must be at least 8 characters long.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPassword" placeholder="Repeat your password" required>
+                    <button type="button" class="toggle-password" onclick="toggleVisibility('confirmPassword')">Show</button>
+                </div>
+                <div class="error-message" id="confirmPasswordError">Passwords do not match.</div>
+            </div>
+
+            <button type="submit" class="btn-submit">Create account</button>
+        </form>
+
+        <div class="footer-text">
+            Already have an account? <a href="#">Sign in</a>
+        </div>
+    </div>
+
+    <script src="script/signup.js"></script>
+</body>
+</html>
