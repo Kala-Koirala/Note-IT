@@ -625,6 +625,10 @@ footer {
     text-decoration: none;
     transition: background 0.15s;
 }
+.college-btn a{
+    text-decoration: none;
+    color: var(--white);
+}
 
 .college-btn:hover {
     background: var(--dark-blue);

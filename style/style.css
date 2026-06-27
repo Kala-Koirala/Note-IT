@@ -37,6 +37,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    min-width: max-content;
+    overflow-x: auto;
 }
 
 .NIT-logo {
@@ -204,6 +206,7 @@ nav {
     max-width: 480px;
     margin: 0 auto 36px;
     line-height: 1.7;
+    margin-bottom: 10px;
 }
 
 .course-cards {
@@ -211,7 +214,8 @@ nav {
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    margin-bottom: 52px;
+    margin-top: 72px;
+    margin-bottom: 72px;
 }
 
 .course-card {
@@ -296,6 +300,7 @@ nav {
     justify-content: center;
     gap: 60px;
     flex-wrap: wrap;
+    margin: 56px;
 }
 
 .stat-item {
@@ -317,7 +322,7 @@ nav {
 
 
 .section {
-    padding: 72px 24px;
+    padding: 82px 14px;
 }
 
 .section.gray {
@@ -345,7 +350,7 @@ nav {
 .steps {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
     max-width: 900px;
     margin: 0 auto;
@@ -384,16 +389,16 @@ nav {
 .features {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
 .feature {
     background: var(--gray-bg);
     border-radius: 16px;
-    padding: 24px 20px;
+    padding: 24px 30px;
     flex: 1;
     min-width: 170px;
     max-width: 200px;

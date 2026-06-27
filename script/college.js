@@ -8,18 +8,20 @@ const colleges = [
         courses: ["BBA", "BCSIT"],
         phone: "01-4412233",
         website: "apexcollege.edu.np",
-        images: ["apex.jpg", "apex1.jpg"]
+        images: ["apex.jpg", "apex1.jpg"],
+        galleryPage: "college_gallery/Apex.html"
     },
     {
         id: 2,
-        name: "Pokhara Engineering College",
+        name: "Pokhara College of Management",
         university: "Pokhara University",
         location: "Pokhara",
-        address: "Pokhara-9, Kaski",
-        courses: ["BCSIT"],
-        phone: "061-530456",
-        website: "pec.edu.np",
-        images: ["pec.jpg", "pec1.jpg"]
+        address: "Pokhara-3, Kaski",
+        courses: ["BCSIT", "BBA"],
+        phone: "(061) 544761, 570124",
+        website: "pcm.edu.np",
+        images: ["pcm1.jpg", "pcm.png"],
+        galleryPage: "college_gallery/pcm.html"
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ const colleges = [
         courses: ["BBA"],
         phone: "01-4226677",
         website: "uniglobe.edu.np",
-        images: ["uniglobe.jpg", "uniglobe1.png"]
+        images: ["uniglobe.jpg", "uniglobe1.png"],
+        galleryPage: "college_gallery/uniglobe.html"
     }
 ];
 
@@ -71,7 +74,7 @@ function displayColleges(list) {
                 <a href="https://${college.website}" target="_blank">${college.website}</a>
             </div>
 
-            <button class="college-btn">View Full Profile →</button>
+            <button class="college-btn" onclick="window.location.href='${college.galleryPage}'">View Full Profile -></button>
         </div>
     `).join('');
 }

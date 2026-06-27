@@ -36,4 +36,6 @@ function login() {
     msg.style.color = '#16a34a';
     msg.textContent = `Welcome back, ${user.firstName}!`;
     setTimeout(() => window.location.href = "index.html", 1000);
+
+    
 }

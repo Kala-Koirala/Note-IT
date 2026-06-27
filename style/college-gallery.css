@@ -1,0 +1,112 @@
+.clz-gallery-hero {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(180deg, #e8f2ff 0%, #f8fbff 100%);
+}
+
+.clz-gallery-hero h1 {
+    font-size: 2.4rem;
+    color: var(--blue);
+}
+
+.breadcrumb {
+    color: var(--muted-text);
+    padding-top: 10px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--muted-text);
+}
+
+.clz-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+    padding: 40px 60px;
+}
+
+.clz-info>* {
+    min-width: 0;
+}
+
+@media (max-width: 860px) {
+    .college-info {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    /* Move image above text on mobile */
+    .college-hero-img {
+        order: -1;
+        height: 220px;
+    }
+
+    .college-info h2 {
+        font-size: 1.4rem;
+    }
+}
+
+.clz-text h3 {
+    color: var(--dark-blue);
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+
+.clz-text {
+    margin-top: 10px;
+    padding-right: 25px;
+    text-align: justify;
+}
+
+.clz-text p {
+    color: var(--muted-text);
+}
+
+.clz-img img {
+    border-radius: 5px;
+}
+
+.gallery-section {
+    padding: 50px 50px;
+}
+
+.gallery-section h3 {
+    font-size: 1.4rem;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.gallery {
+    columns: 3;
+    column-gap: 15px;
+}
+
+.gallery img {
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .college-intro {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .gallery {
+        columns: 2;
+    }
+
+    .gallery-section {
+        padding: 24px;
+    }
+}
