@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="../style/owl.carousel.min.css">
     <link rel="stylesheet" href="../style/owl.theme.default.min.css">
-    
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/college&scholar.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
 </head>
@@ -37,6 +37,20 @@
         <div class="login-signup-btn">
             <a href="login.html" class="login-btn">Login</a>
             <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+
+        <div class="profile" style="display: none;">
+            <div class="full-profile">
+                <span id="profile-icon"></span>
+                <span id="user-profile"></span>
+            </div>
+            <div class="logout">
+                <div class="logout-inner">
+                    <img src="../assets/logout.svg" alt="" height="20" width="20">
+                    <a href="#" id="logout-btn">Logout</a>
+                </div>
+
+            </div>
         </div>
     </nav>
 
@@ -96,6 +110,7 @@
     <script src="../script/jquery.min.js"></script>
     <script src="../script/owl.carousel.min.js"></script>
     
+    
     <script>
         $(document).ready(function() {
             $('.owl-carousel').owlCarousel({
@@ -115,5 +130,7 @@
     </script>
     
     <script src="../script/college.js"></script>
+    
+    <script src="../script/auth.js"></script>
 </body>
 </html>

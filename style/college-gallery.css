@@ -7,16 +7,17 @@
 .clz-gallery-hero h1 {
     font-size: 2.4rem;
     color: var(--blue);
+    padding-bottom: 8px;
 }
 
-.breadcrumb {
+.breadcrumb a{
     color: var(--muted-text);
     padding-top: 10px;
 }
 
 .breadcrumb a {
     text-decoration: none;
-    color: var(--muted-text);
+    color: var(--blue);
 }
 
 .clz-info {

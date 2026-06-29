@@ -176,6 +176,71 @@ nav {
     background: var(--dark-blue);
 }
 
+.profile{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.profile a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.full-profile{
+    display: flex;
+}
+
+
+.profile .logout{
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    background: none;
+
+}
+.logout-inner:hover{
+    background-color: var(--pale-blue);
+}
+.logout-inner{
+    background: white;
+    padding: 10px 20px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    margin-top: 4px;
+    display: flex;
+    gap: 10px;
+}
+
+.profile:hover .logout{
+    display: flex;
+}
+
+.profile .logout-inner:hover{
+    background: var(--pale-blue);
+}
+
+.full-profile{
+    display: block;
+    border: 1px solid var(--border);
+    padding: 7px 15px;
+    border-radius: 70px;
+}
+.full-profile:hover{
+    background: var(--pale-blue);
+}
+
+#profile-icon{
+    background: var(--blue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+#user-profile{
+    padding-left: 5px;
+}
+
+
+
 .hero {
     background: linear-gradient(180deg, #e8f2ff 0%, #f8fbff 100%);
     text-align: center;
