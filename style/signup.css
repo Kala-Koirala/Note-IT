@@ -168,10 +168,10 @@ input.invalid:focus {
 }
 
 .ui-datepicker-header{
-    background: var(--blue);
-    color: var(--white);
+    background: var(--blue) !important;
+    color: var(--white) !important;
     font-weight: 600;
-    border: none;
+    border: none !important;
 }
 
 .ui-datepicker th{
@@ -203,3 +203,30 @@ input.invalid:focus {
     border: none !important;
 }
 
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    background-image: none !important;
+    text-indent: 0 !important;
+    overflow: visible !important;
+    font-size: 0px;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.ui-datepicker .ui-datepicker-prev span::before {
+    content: '<';
+    font-size: 16px;
+}
+
+.ui-datepicker .ui-datepicker-next span::before {
+    content: '>';
+    font-size: 16px;
+}
+
+.ui-datepicker .ui-datepicker-next:hover, 
+.ui-datepicker .ui-datepicker-prev:hover{
+    background: none !important;
+}
