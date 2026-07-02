@@ -28,7 +28,7 @@ function login() {
     }
 
     // Save session
-    const session = { firstName: user.firstName, email: user.email };
+    const session = { firstName: user.firstName, lastName: user.lastName, email: user.email };
     remember
         ? localStorage.setItem("session", JSON.stringify(session))
         : sessionStorage.setItem("session", JSON.stringify(session));
