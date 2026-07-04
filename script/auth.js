@@ -3,8 +3,8 @@ const user = JSON.parse(localStorage.getItem("session") || sessionStorage.getIte
 if(user){
     document.querySelector(".login-signup-btn").style.display = "none";
     document.querySelector(".profile").style.display = "block";
-    document.getElementById("user-profile").textContent = user.lastName.toUpperCase();
-    document.getElementById("profile-icon").textContent = user.lastName.charAt(0).toUpperCase();
+    document.getElementById("user-profile").textContent = user.firstName.toUpperCase();
+    document.getElementById("profile-icon").textContent = user.firstName.charAt(0).toUpperCase();
 
 
     document.getElementById("logout-btn").addEventListener("click", () => {

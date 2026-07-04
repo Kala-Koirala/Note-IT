@@ -239,6 +239,77 @@ nav {
     padding-left: 5px;
 }
 
+.menu-responsive{
+    display: none;
+    position: relative;
+}
+
+.menu-responsive button{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 6px 0;
+    flex-direction: column;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.menu-responsive:hover .menu-dropdown{
+    display: flex;
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-items a{
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 15px;
+}
+
+.menu-items a:hover{
+    background: var(--pale-blue);
+}
+
+
+@media (max-width: 800px){
+    .pages, .login-signup-btn, .profile{
+        display: none;
+    }
+
+    .menu-responsive{
+        display: block;
+    }
+
+    nav{
+        height: 40px;
+        padding: 0 12px;
+    }
+
+    .NIT-logo img{
+        width: 35px;
+        height: 40px;
+    }
+
+    .NIT-logo span{
+        font-size: 0.9rem;
+    }
+}
+
 
 
 .hero {
