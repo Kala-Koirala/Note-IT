@@ -52,7 +52,7 @@
     margin-bottom: 16px;
 }
 
-.sem-bnts {
+.sem-btns {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -83,6 +83,49 @@
     color: var(--blue);
     border-bottom-color: var(--blue);
     background: var(--pale-blue);
+}
+
+
+.sem-btn .short{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .course-hero{
+        padding: 24px 16px;
+    }
+    .course-hero h1{
+        font-size: 1.6rem;
+    }
+    .sem-section{
+        padding: 24px 16px;
+    }
+    .sem-btn .full{
+        display: none;
+    }
+    .sem-btn .short{
+        display: inline;
+    }
+    .sem-btns{
+        gap: 4px;
+        justify-content: space-between;
+    }
+    .sem-btn{
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    .sem-contents.on{
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px){
+    .sem-btn{
+        flex: 1 1 calc(50% - 4px);
+    }
+    .sub-card{
+        padding: 16px;
+    }
 }
 
 .sem-contents {
