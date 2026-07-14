@@ -286,7 +286,7 @@ nav {
 }
 
 
-@media (max-width: 800px){
+@media (max-width: 950px){
     .pages, .login-signup-btn, .profile{
         display: none;
     }
