@@ -1,0 +1,158 @@
+:root {
+    --blue: #2563eb;
+    --light-blue: #3b82f6;
+    --pale-blue: #dbeafe;
+    --dark-blue: #1e40af;
+    --text: #0f172a;
+    --muted-text: #475569;
+    --bg: #f0f6ff;
+    --white: #ffffff;
+    --gray-bg: #f1f5f9;
+    --border: #e2e8f0;
+    --radius: 10px;
+}
+
+
+.course-hero {
+    background: linear-gradient(180deg, #e8f2ff 0%, #f8fbff 100%);
+    text-align: center;
+    padding: 40px 24px 25px;
+}
+
+.course-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800px;
+    margin: 0 auto 10px;
+}
+
+.sub-code {
+    color: var(--blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.course-hero p {
+    color: var(--muted-text);
+    margin-bottom: 15px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.resources-btn {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 54px;
+    z-index: 99;
+    background: white;
+}
+
+.resource-btn {
+    background: none;
+    border: none;
+    font-weight: 600px;
+    color: var(--muted-text);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.resource-btn:hover {
+    color: var(--blue);
+    background: var(--pale-blue);
+    border-color: var(--blue);
+}
+
+.resource-btn.on {
+    color: var(--blue);
+    background: var(--pale-blue);
+    border-color: var(--blue);
+}
+
+.resources {
+    display: none;
+}
+
+.resources.on {
+    display: block;
+}
+
+.notes {
+    flex: 1;
+}
+
+.notes-arrangement {
+    display: flex;
+    height: 85vh;
+}
+
+.note {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#u1-notes {
+    display: block;
+}
+
+.note iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.unit-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border);
+    background: var(--gray-bg);
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.unit-btn {
+    background: none;
+    border: none;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, background 0.2s;
+}
+
+.unit-btn:hover {
+    color: var(--blue);
+    background: var(--pale-blue);
+}
+
+.unit-btn.on {
+    background: var(--pale-blue);
+    color: var(--blue);
+}
+
+#syllabus,
+#pq {
+    height: 85vh;
+}
+
+#syllabus iframe,
+#pq iframe {
+    height: 100%;
+    width: 100%;
+}
