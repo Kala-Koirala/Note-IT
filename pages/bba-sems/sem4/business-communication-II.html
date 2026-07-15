@@ -74,19 +74,34 @@
     </section>
 
     <div class="resources-btn">
-        <button class="resource-btn on" id="notes-btn"><img src="../../../assets/notes.svg" alt="" height="30" width="30">Notes</button>
-        <button class="resource-btn" id="syl-btn"><img src="../../../assets/syllabus.svg" alt="" height="30" width="30">Syllabus</button>
-        <button class="resource-btn" id="pq-btn"><img src="../../../assets/past_papers.svg" alt="" height="30" width="30">Past Questions</button>
+        <button class="resource-btn on" id="notes-btn"><img src="../../../assets/notes.svg" alt="" height="30" width="30">
+            <span class="btn-text">Notes</span>
+        </button>
+        <button class="resource-btn" id="syl-btn"><img src="../../../assets/syllabus.svg" alt="" height="30" width="30">
+            <span class="btn-text">Syllabus</span>
+        </button>
+        <button class="resource-btn" id="pq-btn"><img src="../../../assets/past_papers.svg" alt="" height="30" width="30">
+            <span class="btn-text">Past Questions</span>
+        </button>
     </div>
 
     <div class="resources on" id="notes">
+        <button class="units-toggle" id="units-btn" type="button">
+            <span id="current-unit">Unit 1</span>
+            <img src="../../../assets/sort-up.svg" alt="" height="10" width="10">
+        </button>
         <div class="notes-arrangement">
+            <aside class="unit-sidebar" id="unit-sidebar">
+                <button class="unit-btn on" id="u1">Unit 1</button>
+            </aside>
 
-            <div class="notes on"><iframe src="../../../assets/pdfs/demoPDF.pdf" frameborder="0" height="100%" width="100%"></iframe></div>
+            <div class="notes">
+                <div class="note" id="u1-notes">
+                    <iframe src="../../../assets/pdfs/demoPDF.pdf" frameborder="0" width="100%" height="100%" style="border: none;"></iframe>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="resources" id="syllabus">
+    </div><div class="resources" id="syllabus">
         <iframe src="../../../assets/pdfs/syllabusDemo.pdf" frameborder="0" height="100%" width="100%"
             style="border: none;"></iframe>
     </div>

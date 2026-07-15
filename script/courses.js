@@ -39,3 +39,31 @@ unitBtns.forEach(function (btn) {
     });
 });
 
+// for responsiveness
+(function () {
+    var unitsBtn = document.getElementById("units-btn");
+    var sidebar = document.getElementById("unit-sidebar");
+    var label = document.getElementById("current-unit");
+
+    if(!unitsBtn || !sidebar){
+        return;
+    }
+
+  
+    var unitButtons = document.querySelectorAll(".unit-btn");
+
+    unitsBtn.addEventListener('click', function(){
+        sidebar.classList.toggle('open');
+        unitsBtn.classList.toggle('open');
+    });
+
+    unitButtons.forEach(function (btn){
+        btn.addEventListener('click', function(){
+            if(label){
+              label.textContent = btn.textContent;  
+              sidebar.classList.remove('open');
+              unitsBtn.classList.remove('open');
+            } 
+        });
+    });
+})();

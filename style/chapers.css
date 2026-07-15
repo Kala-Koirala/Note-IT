@@ -156,3 +156,101 @@
     height: 100%;
     width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+    .resources-btn{
+        top: 40px;
+        gap: 10px;
+    }
+    .resource-btn{
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .resources-btn{
+        top: 40px;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        padding: 5px 0;
+    }
+    .resource-btn{
+        padding: 8px;
+        justify-content: center;
+    }
+    .resource-btn .btn-text{
+        display: none;
+    }
+    .resource-btn img{
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.units-toggle{
+    display: none;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid var(--border);
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 0.88rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.units-toggle img{
+    transition: transform 0.2s;
+}
+.units-toggle.open img{
+    transform: rotate(180deg)
+}
+
+@media (max-width: 950px){
+    .course-hero{
+        padding: 24px 14px 16px;
+    }
+    .course-hero h1{
+        font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+    .course-hero p{
+        font-size: 0.85rem;
+    }
+    .units-toggle{
+        display: flex;
+    }
+    .notes-arrangement{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .unit-sidebar{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        transition: max-height 0.25s ease, padding 0.25s ease;
+    }
+
+    .unit-sidebar.open{
+        max-height: 420px;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .unit-btn{
+        padding: 10px 8px;
+        font-size: 0.85rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .note, .notes, #syllabus, #pq{
+        height: 60vh;
+    }
+}
