@@ -85,7 +85,7 @@ function filterColleges() {
     const selectedLocation = document.getElementById("location-filter").value;
 
     const filtered = colleges.filter(college => {
-        const matchesSearch = college.name.toLowerCase().includes(searchText) || college.abbr.toLowerCase().includes(searchText);
+        const matchesSearch = college.name.toLowerCase().includes(searchText);
         const matchesCourse = selectedCourse === "" || college.courses.includes(selectedCourse);
         const matchesLocation = selectedLocation === "" || college.location === selectedLocation;
 

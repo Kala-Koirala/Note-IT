@@ -42,7 +42,7 @@ nav {
 .NIT-logo {
     display: flex;
     align-items: center;
-    gap: -10px;
+    gap: 0px;
     text-decoration: none;
     color: var(--dark-blue);
     animation: logo 0.5s ease-in;
