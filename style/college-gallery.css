@@ -32,23 +32,6 @@
     min-width: 0;
 }
 
-@media (max-width: 860px) {
-    .college-info {
-        grid-template-columns: 1fr;
-        padding: 24px;
-    }
-
-    /* Move image above text on mobile */
-    .college-hero-img {
-        order: -1;
-        height: 220px;
-    }
-
-    .college-info h2 {
-        font-size: 1.4rem;
-    }
-}
-
 .clz-text h3 {
     color: var(--dark-blue);
     font-size: 1.7rem;
@@ -67,6 +50,9 @@
 
 .clz-img img {
     border-radius: 5px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .gallery-section {
@@ -97,17 +83,79 @@
     transform: translateY(-5px);
 }
 
+
+@media (max-width: 992px){
+    .clz-info{
+        padding: 32px 36px;
+        gap: 24px;
+    }
+    .gallery-section{
+        padding: 36px;
+    }
+    .gallery{
+        columns: 2;
+    }
+}
+
 @media (max-width: 768px) {
-    .college-intro {
-        grid-template-columns: 1fr;
-        padding: 24px;
+    .clz-gallery-hero h1 {
+        font-size: 1.9rem;
     }
 
-    .gallery {
-        columns: 2;
+    .clz-info {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 20px;
+    }
+
+    .clz-img {
+        order: -1;
+    }
+
+    .clz-img img {
+        max-height: 240px;
+        object-fit: cover;
+    }
+
+    .clz-text {
+        padding-right: 0;
+    }
+
+    .clz-text h3 {
+        font-size: 1.4rem;
     }
 
     .gallery-section {
         padding: 24px;
+    }
+
+    .gallery-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .clz-gallery-hero {
+        padding: 14px;
+    }
+
+    .clz-gallery-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .clz-info {
+        padding: 16px;
+    }
+
+    .gallery-section {
+        padding: 16px;
+    }
+
+    .gallery {
+        columns: 1;
+    }
+
+    .gallery img {
+        margin-bottom: 12px;
     }
 }
