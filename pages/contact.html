@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../style/contactus.css">
     <link rel="stylesheet" href="../style/style.css">
 </head>
+
 <body>
     <nav>
         <a href="../index.html" class="NIT-logo">
@@ -66,35 +68,88 @@
             </div>
         </div>
     </nav>
+    <div class="header">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you. Choose the best way to reach us below.</p>
+    </div>
 
-    
+    <div class="contact-container">
+        <div class="contact-info">
 
-    <div class="container">
-        
-        <div class="header">
-            <h1>Get In Touch</h1>
-            <p>We'd love to hear from you. Choose the best way to reach us below.</p>
+            <div class="contact-card">
+                <h2>Contact Us</h2>
+
+                <div class="contact">
+                    <img src="../assets/phone.svg" alt="phone" height="25" width="25">
+                    <div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+977 9800000000</div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <img src="../assets/email.svg" alt="" height="25" width="25">
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">noteit@gmail.com.np</div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <img src="../assets/location.svg" alt="" height="25" width="25">
+                    <div>
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Basundhara Chakrapath, Kathmandu</div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
-        <div class="contact-cards">
-            
-            <div class="card">
-                <h3>Call Us</h3>
-                <p>Mon-Fri from 9am to 6pm.</p>
-                <p><a href="tel:+9779801234567">+977 980-1234567</a></p>
-            </div>
 
-            <div class="card">
-                <h3>Contact Us</h3>
-                <p>We will respond within 24 hours.</p>
-                <p><a href="mailto:noteit123@gmail.com">noteit123@gmail.com</a></p>
-            </div>
+        <div class="form-container">
+            <form id="contact-form">
+                <div class="form-field">
+
+                    <label for="form-name" class="form-label">Name<span style="color: red;">*</span></label>
+                    <input type="text" class="form-input" id="form-name" placeholder="Enter your name">
+
+                    <div class="error-text" id="form-name-error"><span style="
+                    color: red;">Please enter your name</span></div>
+                </div>
 
 
+                <div class="form-field">
+
+                    <label for="form-email" class="form-label">Email<span style="color: red;">*</span></label>
+                    <input type="text" class="form-input" id="form-email" placeholder="someone@gmail.com">
+
+                    <div class="error-text" id="form-email-error"><span style="color: red;">Please enter a valid email address</span></div>
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="message-box">Message<span style="color: red;">*</span></label>
+                    <textarea id="form-textarea" class="form-input" placeholder="Your Questions..."></textarea>
+
+                    <div class="error-text" id="message-box-error"></div>
+                </div>
+                <p><span style="color: red;">*</span> means required field</p>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </div>
 
+    <div class="map">
+        <iframe src="https://www.google.com/maps?q=Basundhara+Chakrapath,+Kathmandu&output=embed" width="100%"
+            height="100%" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+
     <footer>© 2026 Note-IT | PU Resource Hub</footer>
     <script src="../script/auth.js"></script>
+    <script src="../script/contact.js"></script>
 </body>
+
 </html>
