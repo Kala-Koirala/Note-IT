@@ -26,33 +26,8 @@ body {
     background-color: var(--white);
 }
 
-.hero {
-    background: linear-gradient(180deg, #e8f2ff 0%, #f8fbff 100%);
-    text-align: center;
-    padding: 52px 24px 56px;
-}
 
-.hero h1 {
-    font-family: 'Sora', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 800;
-    line-height: 1.2;
-    color: var(--text);
-    max-width: 640px;
-    margin: 0 auto 10px;
-}
 
-.hero h1 span {
-    color: var(--blue);
-}
-
-.hero p {
-    color: var(--muted-text);
-    font-size: 0.95rem;
-    max-width: 480px;
-    margin: 0 auto 36px;
-    line-height: 1.7;
-}
 
 .course-cards {
     display: flex;
@@ -287,8 +262,10 @@ footer {
 }
 
 .header {
+    background: linear-gradient(180deg, #e8f2ff 0%, #f8fbff 100%);
     text-align: center;
-    margin-bottom: 32px;
+    padding: 52px 24px 56px;
+    margin-top: 0;
 }
 
 .header h1 {
