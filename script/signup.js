@@ -33,6 +33,7 @@ form.addEventListener('submit', function (e) {
 
     const firstName = document.getElementById('firstName');
     const lastName = document.getElementById('lastName');
+    const date = document.getElementById('date-input');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirmPassword');
@@ -43,6 +44,7 @@ form.addEventListener('submit', function (e) {
     // Validate all inputs
     const isFirstNameValid = validateField(firstName, document.getElementById('firstNameError'), firstName.value.trim() !== '');
     const isLastNameValid = validateField(lastName, document.getElementById('lastNameError'), lastName.value.trim() !== '');
+    const isDateValid = validateField(date, document.getElementById('dateError'));
     const isEmailValid = validateField(email, document.getElementById('emailError'), emailPattern.test(email.value));
     const isPasswordValid = validateField(password, document.getElementById('passwordError'), password.value.length >= 8);
     const isConfirmPasswordValid = validateField(confirmPassword, document.getElementById('confirmPasswordError'), confirmPassword.value === password.value && confirmPassword.value !== '');

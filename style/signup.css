@@ -23,8 +23,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    font-family: 'Inter', sans-serif;}
 
 body {
     background-color: var(--bg-color);
@@ -58,7 +57,7 @@ body {
 }
 
 .header p {
-    color: #64748b;
+    color: var(--muted-text);
     font-size: 14px;
 }
 
@@ -78,7 +77,7 @@ label {
     margin-bottom: 6px;
     font-size: 14px;
     font-weight: 600;
-    color: #475569;
+    color: var(--muted-text);
 }
 
 input {
@@ -154,7 +153,7 @@ input.invalid:focus {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    color: #64748b;
+    color: var(--muted-text);
 }
 
 .footer-text a {
