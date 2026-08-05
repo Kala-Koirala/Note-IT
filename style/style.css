@@ -47,11 +47,13 @@ nav {
     color: var(--dark-blue);
     animation: logo 0.5s ease-in;
 }
-@keyframes logo{
-    from{
+
+@keyframes logo {
+    from {
         opacity: 0;
-    } 
-    to{
+    }
+
+    to {
         opacity: 1;
     }
 }
@@ -176,32 +178,35 @@ nav {
     background: var(--dark-blue);
 }
 
-.profile{
+.profile {
     cursor: pointer;
     margin-right: 5px;
 }
 
-.profile a{
+.profile a {
     text-decoration: none;
     color: black;
     display: block;
 }
-.full-profile{
+
+.full-profile {
     display: flex;
 }
 
 
-.profile .logout{
+.profile .logout {
     display: none;
     position: absolute;
     min-width: 100px;
     background: none;
 
 }
-.logout-inner:hover{
+
+.logout-inner:hover {
     background-color: var(--pale-blue);
 }
-.logout-inner{
+
+.logout-inner {
     background: white;
     padding: 10px 20px;
     border: 1px solid var(--border);
@@ -211,47 +216,49 @@ nav {
     gap: 10px;
 }
 
-.profile:hover .logout{
+.profile:hover .logout {
     display: flex;
 }
 
-.profile .logout-inner:hover{
+.profile .logout-inner:hover {
     background: var(--pale-blue);
 }
 
-.full-profile{
+.full-profile {
     display: block;
     border: 1px solid var(--border);
     padding: 7px 15px;
     border-radius: 70px;
 }
-.full-profile:hover{
+
+.full-profile:hover {
     background: var(--pale-blue);
 }
 
-#profile-icon{
+#profile-icon {
     background: var(--blue);
     color: white;
     padding: 5px 10px;
     border-radius: 50%;
 }
-#user-profile{
+
+#user-profile {
     padding-left: 5px;
 }
 
-.menu-responsive{
+.menu-responsive {
     display: none;
     position: relative;
 }
 
-.menu-responsive button{
+.menu-responsive button {
     background: none;
     border: none;
     display: flex;
     align-items: center;
 }
 
-.menu-dropdown{
+.menu-dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -266,49 +273,26 @@ nav {
     overflow-y: auto;
 }
 
-.menu-responsive:hover .menu-dropdown{
+.menu-responsive:hover .menu-dropdown {
     display: flex;
 }
 
-.menu-items{
+.menu-items {
     display: flex;
     flex-direction: column;
 }
 
-.menu-items a{
+.menu-items a {
     text-decoration: none;
     color: var(--text);
     padding: 8px 15px;
 }
 
-.menu-items a:hover{
+.menu-items a:hover {
     background: var(--pale-blue);
 }
 
 
-@media (max-width: 950px){
-    .pages, .login-signup-btn, .profile{
-        display: none;
-    }
-
-    .menu-responsive{
-        display: block;
-    }
-
-    nav{
-        height: 40px;
-        padding: 0 12px;
-    }
-
-    .NIT-logo img{
-        width: 35px;
-        height: 40px;
-    }
-
-    .NIT-logo span{
-        font-size: 0.9rem;
-    }
-}
 
 
 
@@ -317,7 +301,6 @@ nav {
     text-align: center;
     padding: 52px 24px 56px;
 }
-
 
 
 .hero h1 {
@@ -570,4 +553,59 @@ footer {
     font-size: 0.82rem;
     color: var(--muted-text);
     border-top: 1px solid var(--border);
+}
+
+
+@media (max-width: 950px) {
+
+    .pages,
+    .login-signup-btn,
+    .profile {
+        display: none;
+    }
+
+    .menu-responsive {
+        display: block;
+    }
+
+    nav {
+        height: 40px;
+        padding: 0 12px;
+    }
+
+    .NIT-logo img {
+        width: 35px;
+        height: 40px;
+    }
+
+    .NIT-logo span {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 38px 14px 40px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .course-cards {
+        gap: 20px;
+        margin-top: 42px;
+        margin-bottom: 32px;
+    }
+
+    .stats {
+        gap: 40px;
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .section {
+        padding: 42px 14px;
+    }
+    .steps, .features{
+        gap: 30px;
+    }
 }
