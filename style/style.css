@@ -216,7 +216,16 @@ nav {
     gap: 10px;
 }
 
-.profile:hover .logout {
+.profile .logout {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding-top: 8px;
+    min-width: 100px;
+    background: none;
+}
+
+.profile.active .logout {
     display: flex;
 }
 
@@ -273,7 +282,7 @@ nav {
     overflow-y: auto;
 }
 
-.menu-responsive:hover .menu-dropdown {
+.menu-responsive.active .menu-dropdown {
     display: flex;
 }
 
@@ -559,13 +568,19 @@ footer {
 @media (max-width: 950px) {
 
     .pages,
-    .login-signup-btn,
-    .profile {
+    .login-signup-btn{
         display: none;
     }
 
     .menu-responsive {
         display: block;
+        margin-left: 12px;
+    }
+
+    .profile{
+        display: block;
+        position: relative;
+        margin-left: auto;
     }
 
     nav {
